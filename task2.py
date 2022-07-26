@@ -31,9 +31,10 @@ while counter_pages < 4:                # активна "Следующая с�
             abc = category.text
             if abc == animals[0]:
                 count += 1
-                print(f'{abc}: {count}')
             else:
                 count = 0
+                continue
+            print(f'{abc}: {count}')
     # обращаемся к кнопкам в dive животных
     div_link = soup.find('div', id="mw-pages")
     buttons = div_link.find_all('a',
